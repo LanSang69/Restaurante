@@ -1,0 +1,7 @@
+.button {
+    -fx-max-width: 170;
+    -fx-min-height: 50;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+    -fx-content-display: center;
+}

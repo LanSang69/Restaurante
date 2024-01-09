@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.Controller" id="vbox_menu" spacing="10" alignment="CENTER" minWidth="600" minHeight="600" stylesheets="resources/css/menu.css">
+    <Button text="Mostrar menú" fx:id="menu" onAction="#show_menu"/>
+    <Button text="Realizar un pedido" fx:id="pedido" onAction="#r_pedido"/>
+    <Button text="Registrar repartidores" fx:id="repartidores" onAction="#r_repartidores"/>
+    <Button text="Registrar platillo" fx:id="platillos" onAction="#r_platillo"/>
+    <Button text="Registrar restaurante" fx:id="datos_restaurante" onAction="#r_datos_restaurante"/>
+    <Button text="Salir" fx:id="salir" onAction="#close"/>
+</VBox>
+
