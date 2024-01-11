@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.Test" id="vbox_menu" spacing="10" alignment="CENTER" minWidth="600" minHeight="600" stylesheets="resources/css/menu.css">
+    <Button text="Salir" fx:id="salir" onAction="#close"/>
+</VBox>
+

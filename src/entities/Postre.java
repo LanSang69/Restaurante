@@ -1,5 +1,3 @@
 package entities;
-
-public class Postre {
-
+public class Postre extends Receta{
 }

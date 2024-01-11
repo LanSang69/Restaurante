@@ -22,7 +22,7 @@ public class Controller {
 
     @FXML
     private void show_menu(ActionEvent event) {
-        menu.setText("Pressed");
+        System.out.println("hi");
     }
 
     @FXML

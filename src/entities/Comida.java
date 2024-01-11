@@ -1,5 +1,3 @@
 package entities;
-
-public class Comida {
-
+public class Comida extends Receta {
 }
