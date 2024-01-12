@@ -1,52 +1,89 @@
 package controller;
-import javafx.fxml.FXML;
-import javafx.event.ActionEvent;
-import javafx.application.Application;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import java.io.IOException;
+import javax.tools.JavaFileManager.Location;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
+
 
 public class Controller {
     
-    public Button menu;
+        private Stage stage;
+        private Scene scene;
+        private Parent root;
 
     @FXML
-    private void show_menu(ActionEvent event) {
-        System.out.println("hi");
+    private Button close;
+
+    @FXML
+    private Button menuButton;
+
+    @FXML
+    private Button pedidoButton;
+
+    @FXML
+    private Button platilloButton;
+
+    @FXML
+    private Button repartidorButton;
+
+    @FXML
+    private Button restauranteB;
+
+    public void displayMenu(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/menu.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    private void r_pedido(ActionEvent event) {
-        // Code to handle the "Realizar un pedido" button click
+    public void realizarPedido(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/pedido.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    private void r_repartidores(ActionEvent event) {
-        // Code to handle the "Registrar repartidores" button click
+    public void registrarPlatilllo(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/platillo.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    private void r_platillo(ActionEvent event) {
-        // Code to handle the "Registrar platillo" button click
+    public void registrarRepartidor(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/repartidor.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    private void r_datos_restaurante(ActionEvent event) {
-        // Code to handle the "Registrar datos del restaurante" button click
+    public void registrarRestaurante(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/restaurante.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    private void close(ActionEvent event) {
+    void salir(ActionEvent event) {
         Platform.exit();
     }
+
 }

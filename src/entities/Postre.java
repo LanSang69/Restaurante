@@ -1,7 +1,7 @@
 package entities;
 public class Postre implements Receta {
     private String nombre;
-    private Sting precio;
+    private String precio;
     private String descripcion;
     //
 

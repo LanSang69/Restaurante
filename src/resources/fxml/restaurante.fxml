@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlatilloController">
+   <children>
+      <Label layoutX="152.0" layoutY="49.0" text="Datos del Restaurante">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="26.0" />
+         </font>
+      </Label>
+      <TextField layoutX="284.0" layoutY="113.0" prefHeight="24.0" prefWidth="186.0" />
+      <Label layoutX="143.0" layoutY="113.0" text="Nombre:">
+         <font>
+            <Font name="DejaVu Sans ExtraLight" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="283.0" layoutY="162.0" prefHeight="24.0" prefWidth="186.0" />
+      <Label layoutX="145.0" layoutY="162.0" text="Direccion">
+         <font>
+            <Font name="DejaVu Sans ExtraLight" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="210.0" text="Telefono:">
+         <font>
+            <Font name="DejaVu Sans ExtraLight" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="284.0" layoutY="212.0" prefHeight="24.0" prefWidth="186.0" />
+      <Button layoutX="273.0" layoutY="300.0" mnemonicParsing="false" text="OK">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="262.0" layoutY="360.0" mnemonicParsing="false" onAction="#returnToMenu" text="Regresar" />
+   </children>
+</AnchorPane>

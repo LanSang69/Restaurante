@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <Button fx:id="menuButton" layoutX="212.0" layoutY="122.0" mnemonicParsing="false" onAction="#displayMenu" prefHeight="24.0" prefWidth="162.0" text="Ver menu" />
+      <Button fx:id="pedidoButton" layoutX="212.0" layoutY="162.0" mnemonicParsing="false" onAction="#realizarPedido" prefHeight="24.0" prefWidth="162.0" text="Realizar pedido" />
+      <Button fx:id="repartidorButton" layoutX="210.0" layoutY="200.0" mnemonicParsing="false" onAction="#registrarRepartidor" text="Registrar repartidores" />
+      <Button fx:id="platilloButton" layoutX="210.0" layoutY="238.0" mnemonicParsing="false" onAction="#registrarPlatilllo" prefHeight="24.0" prefWidth="162.0" text="Registrar platillo" />
+      <Button fx:id="close" layoutX="269.0" layoutY="346.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
+      <Label layoutX="210.0" layoutY="44.0" text="BIENVENIDO" textAlignment="CENTER">
+         <font>
+            <Font name="Loma" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="restauranteB" layoutX="210.0" layoutY="275.0" mnemonicParsing="false" onAction="#registrarRestaurante" prefHeight="24.0" prefWidth="162.0" text="Registrar restaurante" />
+   </children>
+</AnchorPane>
