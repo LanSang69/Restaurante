@@ -1,18 +1,18 @@
 package entities;
 public class Comida implements Receta {
     private String nombre;
-    private String precio;
+    private Double precio;
     private String descripcion;
     //
 
     public Comida() {
         nombre = "Nombre no registrado";
-        precio = "Precio no registrado";
+        precio = 0.0;
         descripcion = "Descripción no registrada";
         //
     }
 
-    public Comida(String nombre, String precio, String descripcion) {
+    public Comida(String nombre, Double precio, String descripcion) {
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
@@ -27,11 +27,11 @@ public class Comida implements Receta {
         this.nombre = nombre;
     }
 
-    public String getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(Double precio) {
         this.precio = precio;
     }
     

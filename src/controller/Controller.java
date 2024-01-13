@@ -37,13 +37,15 @@ public class Controller {
     @FXML
     private Button restauranteB;
 
-    public void displayMenu(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/menu.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    public void displayMenu(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/fxml/menu.fxml"));
+        Parent root = loader.load();    
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+    
 
     @FXML
     public void realizarPedido(ActionEvent event) throws IOException {
