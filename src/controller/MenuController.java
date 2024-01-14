@@ -26,11 +26,8 @@ public class MenuController implements Initializable{
     @FXML
     private TableColumn<Comida, Double> precioC;
 
-    ObservableList<Comida> list = FXCollections.observableArrayList(
-        new Comida(),
-        new Comida("Arroz", 10.99, "Arroz blanco hecho en casa"),
-        new Comida("Arroz", 10.99, "Arroz rojo hecho en casa")
-    );
+    ObservableList<Comida> list = FXCollections.observableArrayList();
+
 
 
     @Override
@@ -42,5 +39,8 @@ public class MenuController implements Initializable{
       comidas.setItems(list);
     }
 
-}
+    public void updateList(ObservableList<Comida> newData) {
+      list.setAll(newData);
+  }
 
+}

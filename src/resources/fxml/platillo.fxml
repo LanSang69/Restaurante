@@ -3,46 +3,47 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlatilloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlatilloController">
    <children>
-      <Label layoutX="201.0" layoutY="49.0" text="Agregar Platilo">
+      <Label layoutX="371.0" layoutY="55.0" text="Agregar Platilo">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="26.0" />
          </font>
       </Label>
-      <TextField layoutX="284.0" layoutY="113.0" prefHeight="24.0" prefWidth="186.0" />
-      <Label layoutX="143.0" layoutY="113.0" text="Nombre:">
+      <TextField fx:id="nombreP" layoutX="448.0" layoutY="142.0" prefHeight="24.0" prefWidth="206.0" />
+      <Label layoutX="307.0" layoutY="142.0" text="Nombre:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="283.0" layoutY="162.0" prefHeight="24.0" prefWidth="186.0" />
-      <Label layoutX="145.0" layoutY="162.0" text="Descripcion:">
+      <Label layoutX="307.0" layoutY="210.0" text="Descripcion:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="145.0" layoutY="210.0" text="Precio:">
+      <Label layoutX="308.0" layoutY="284.0" text="Precio:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="284.0" layoutY="212.0" prefHeight="24.0" prefWidth="186.0" />
-      <Button layoutX="273.0" layoutY="310.0" mnemonicParsing="false" text="OK">
+      <TextField fx:id="precioP" layoutX="447.0" layoutY="286.0" prefHeight="24.0" prefWidth="206.0" />
+      <Button fx:id="submitB" layoutX="437.0" layoutY="438.0" mnemonicParsing="false" text="OK">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="262.0" layoutY="360.0" mnemonicParsing="false" onAction="#returnToMenu" text="Regresar" />
-      <ChoiceBox layoutX="284.0" layoutY="257.0" prefHeight="24.0" prefWidth="186.0" />
-      <Label layoutX="145.0" layoutY="257.0" text="Tipo:">
+      <ChoiceBox fx:id="tipoP" layoutX="447.0" layoutY="345.0" prefHeight="24.0" prefWidth="206.0" />
+      <Label layoutX="308.0" layoutY="345.0" text="Tipo:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
+      <TextArea fx:id="descripcionP" layoutX="448.0" layoutY="179.0" prefHeight="90.0" prefWidth="206.0" />
+      <Label fx:id="success" alignment="CENTER" contentDisplay="CENTER" layoutX="339.0" layoutY="105.0" prefHeight="16.0" prefWidth="305.0" textFill="#39e43f" />
    </children>
 </AnchorPane>

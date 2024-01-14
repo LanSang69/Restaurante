@@ -7,53 +7,52 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RepartidorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RepartidorController">
    <children>
-      <Label layoutX="172.0" layoutY="49.0" text="Agregar Repartidor">
+      <Label layoutX="339.0" layoutY="50.0" text="Agregar Repartidor">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="26.0" />
          </font>
       </Label>
-      <TextField layoutX="280.0" layoutY="102.0" prefHeight="24.0" prefWidth="186.0" />
-      <Label layoutX="143.0" layoutY="99.0" text="Nombre:">
+      <TextField layoutX="442.0" layoutY="146.0" prefHeight="24.0" prefWidth="186.0" />
+      <Label layoutX="305.0" layoutY="143.0" text="Nombre:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="280.0" layoutY="134.0" prefHeight="24.0" prefWidth="186.0" />
-      <Label layoutX="143.0" layoutY="134.0" text="Apellido:">
+      <TextField layoutX="443.0" layoutY="194.0" prefHeight="24.0" prefWidth="186.0" />
+      <Label layoutX="306.0" layoutY="194.0" text="Apellido:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="143.0" layoutY="170.0" text="Direccion:">
+      <Label layoutX="306.0" layoutY="250.0" text="Direccion:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="273.0" layoutY="310.0" mnemonicParsing="false" text="OK">
+      <Button layoutX="435.0" layoutY="439.0" mnemonicParsing="false" text="OK">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="262.0" layoutY="360.0" mnemonicParsing="false" onAction="#returnToMenu" text="Regresar" />
-      <Label layoutX="144.0" layoutY="209.0" text="Telefono:">
+      <Label layoutX="306.0" layoutY="297.0" text="Telefono:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="144.0" layoutY="247.0" text="Medio:">
+      <Label layoutX="306.0" layoutY="354.0" text="Medio:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="147.0" layoutY="241.0">
+      <Label layoutX="309.0" layoutY="348.0">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="280.0" layoutY="171.0" prefHeight="24.0" prefWidth="186.0" />
-      <TextField layoutX="281.0" layoutY="209.0" prefHeight="24.0" prefWidth="186.0" />
-      <ChoiceBox layoutX="281.0" layoutY="249.0" prefHeight="24.0" prefWidth="186.0" />
+      <TextField layoutX="443.0" layoutY="251.0" prefHeight="24.0" prefWidth="186.0" />
+      <TextField layoutX="443.0" layoutY="297.0" prefHeight="24.0" prefWidth="186.0" />
+      <ChoiceBox layoutX="443.0" layoutY="356.0" prefHeight="24.0" prefWidth="186.0" />
    </children>
 </AnchorPane>
