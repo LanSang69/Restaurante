@@ -7,7 +7,12 @@ public class Cliente extends Persona {
     public Cliente() {
         super();
         metodoPago = "Método de Pago no registrado";
-        correo = "Correo no registrado";
+    }
+
+     // Full constructor
+     public Cliente(String nombre, String direccion, String telefono, String metodoPago) {
+        super(nombre, direccion, telefono);
+        this.metodoPago = metodoPago;
     }
 
     public String getMetodoPago() {
@@ -16,14 +21,6 @@ public class Cliente extends Persona {
 
     public void setMetodoPago(String metodoPago) {
         this.metodoPago = metodoPago;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
     }
 
     @Override

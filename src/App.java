@@ -1,5 +1,4 @@
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,7 +9,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage){
         try{
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/fxml/mainMenu2.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/fxml/mainMenu2.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

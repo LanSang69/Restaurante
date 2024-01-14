@@ -16,7 +16,6 @@ public class Postre implements Receta {
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
-        //
     }
 
     public String getNombre() {
@@ -27,6 +26,7 @@ public class Postre implements Receta {
         this.nombre = nombre;
     }
 
+    @Override
     public Double getPrecio() {
         return precio;
     }

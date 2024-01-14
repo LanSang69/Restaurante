@@ -14,14 +14,14 @@
             <Font name="DejaVu Sans Condensed Bold" size="26.0" />
          </font>
       </Label>
-      <TextField layoutX="442.0" layoutY="146.0" prefHeight="24.0" prefWidth="186.0" />
+      <TextField fx:id="nombreR" layoutX="442.0" layoutY="146.0" prefHeight="24.0" prefWidth="186.0" />
       <Label layoutX="305.0" layoutY="143.0" text="Nombre:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="443.0" layoutY="194.0" prefHeight="24.0" prefWidth="186.0" />
-      <Label layoutX="306.0" layoutY="194.0" text="Apellido:">
+      <TextField fx:id="apellidoR" layoutX="443.0" layoutY="194.0" prefHeight="24.0" prefWidth="186.0" />
+      <Label layoutX="306.0" layoutY="194.0" text="Apellidos:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
@@ -31,7 +31,7 @@
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="435.0" layoutY="439.0" mnemonicParsing="false" text="OK">
+      <Button fx:id="submitR" layoutX="435.0" layoutY="439.0" mnemonicParsing="false" text="OK">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
@@ -51,8 +51,9 @@
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="443.0" layoutY="251.0" prefHeight="24.0" prefWidth="186.0" />
-      <TextField layoutX="443.0" layoutY="297.0" prefHeight="24.0" prefWidth="186.0" />
-      <ChoiceBox layoutX="443.0" layoutY="356.0" prefHeight="24.0" prefWidth="186.0" />
+      <TextField fx:id="DireccionR" layoutX="443.0" layoutY="251.0" prefHeight="24.0" prefWidth="186.0" />
+      <TextField fx:id="telefonoR" layoutX="443.0" layoutY="297.0" prefHeight="24.0" prefWidth="186.0" />
+      <ChoiceBox fx:id="medio" layoutX="443.0" layoutY="356.0" prefHeight="24.0" prefWidth="186.0" />
+      <Label fx:id="success" alignment="CENTER" layoutX="337.0" layoutY="99.0" prefHeight="16.0" prefWidth="256.0" />
    </children>
 </AnchorPane>

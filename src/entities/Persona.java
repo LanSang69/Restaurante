@@ -13,6 +13,21 @@ public abstract class Persona {
         telefono = "Teléfono no registrado";
     }
 
+    // Full constructor
+    public Persona(String nombre, String apellido, String direccion, String telefono) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+
+       // Demi-full constructor
+       public Persona(String nombre, String direccion, String telefono) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+
     public String getNombre() {
         return nombre;
     }

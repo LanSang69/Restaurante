@@ -4,14 +4,30 @@ public class Repartidor extends Persona {
     private String medioTransporte;
     private Double calificacion;
 
+    // Empty Constructor
     public Repartidor() {
-        super();
-        medioTransporte = "Medio de Transporte no registrado";
-        calificacion = 0.0;
+        super(); // Assuming Persona has an empty constructor
+        this.medioTransporte = "Medio de Transporte no registrado";
+        this.calificacion = 0.0;
     }
 
-    public Repartidor (Repartidor repartidor) {
-        //
+     // Full constructor
+     public Repartidor(String nombre, String apellido, String direccion, String telefono, String medioTransporte) {
+        super(nombre, apellido, direccion, telefono);
+        this.medioTransporte = medioTransporte;
+        this.calificacion = 0.0;
+    }
+
+    // Constructor with attributes from Persona class initialized
+    public Repartidor(String nombre, String apellido, String direccion, String telefono) {
+        super(nombre, apellido, direccion, telefono);
+        this.medioTransporte = "Medio de Transporte no registrado";
+        this.calificacion = 0.0;
+    }
+
+    // Copy constructor
+    public Repartidor(Repartidor repartidor) {
+        super(repartidor.nombre, repartidor.apellido, repartidor.direccion, repartidor.telefono);
         this.medioTransporte = repartidor.medioTransporte;
         this.calificacion = repartidor.calificacion;
     }

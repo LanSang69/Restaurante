@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlatilloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RestauranteController">
    <children>
       <Label layoutX="321.0" layoutY="50.0" text="Datos del Restaurante">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="26.0" />
          </font>
       </Label>
-      <TextField layoutX="425.0" layoutY="167.0" prefHeight="24.0" prefWidth="206.0" />
+      <TextField fx:id="nombreR" layoutX="425.0" layoutY="167.0" prefHeight="24.0" prefWidth="206.0" />
       <Label layoutX="310.0" layoutY="164.0" text="Nombre:">
          <font>
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
@@ -29,12 +29,13 @@
             <Font name="DejaVu Sans ExtraLight" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="442.0" layoutY="389.0" mnemonicParsing="false" text="OK">
+      <Button fx:id="submitBR" layoutX="442.0" layoutY="389.0" mnemonicParsing="false" text="OK">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <TextField layoutX="425.0" layoutY="220.0" prefHeight="24.0" prefWidth="206.0" />
-      <TextField layoutX="425.0" layoutY="280.0" prefHeight="24.0" prefWidth="206.0" />
+      <TextField fx:id="direccionR" layoutX="425.0" layoutY="220.0" prefHeight="24.0" prefWidth="206.0" />
+      <TextField fx:id="telefonoR" layoutX="425.0" layoutY="280.0" prefHeight="24.0" prefWidth="206.0" />
+      <Label fx:id="success" alignment="CENTER" layoutX="321.0" layoutY="106.0" prefHeight="16.0" prefWidth="296.0" />
    </children>
 </AnchorPane>

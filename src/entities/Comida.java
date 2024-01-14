@@ -9,7 +9,7 @@ public class Comida implements Receta {
         nombre = "Nombre no registrado";
         precio = 0.0;
         descripcion = "Descripción no registrada";
-        //
+
     }
 
     public Comida(String nombre, Double precio, String descripcion) {
@@ -27,6 +27,7 @@ public class Comida implements Receta {
         this.nombre = nombre;
     }
 
+    @Override
     public Double getPrecio() {
         return precio;
     }

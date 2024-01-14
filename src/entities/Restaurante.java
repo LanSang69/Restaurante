@@ -7,24 +7,23 @@ public class Restaurante {
     private String nombre;
     private String direccion;
     private String telefono;
+    private List<Pedido> pedidos;
     private List<Comida> comidas;
     private List<Bebida> bebidas;
     private List<Postre> postres;
     private List<Repartidor> repartidores;
-    private List<Cliente> clientes;
 
     // Constructors
-// Constructors
     public Restaurante() {
-    this.nombre = "El nombre no ha sido agregado";
-    this.direccion = "La dirección no ha sido asignada";
-    this.telefono = "Sin teléfono";
-    this.comidas = new ArrayList<>();
-    this.bebidas = new ArrayList<>();
-    this.postres = new ArrayList<>();
-    this.repartidores = new ArrayList<>();
-    this.clientes = new ArrayList<>();
-}
+        this.nombre = "El nombre no ha sido agregado";
+        this.direccion = "La dirección no ha sido asignada";
+        this.telefono = "Sin teléfono";
+        this.comidas = new ArrayList<>();
+        this.bebidas = new ArrayList<>();
+        this.postres = new ArrayList<>();
+        this.repartidores = new ArrayList<>();
+        this.pedidos = new ArrayList<>();
+    }
 
     public Restaurante(String nombre, String direccion, String telefono) {
         this.nombre = nombre;
@@ -34,12 +33,10 @@ public class Restaurante {
         this.bebidas = new ArrayList<>();
         this.postres = new ArrayList<>();
         this.repartidores = new ArrayList<>();
-        this.clientes = new ArrayList<>();
+        this.pedidos = new ArrayList<>();
     }
 
-
     // Getters and Setters
-
     public String getNombre() {
         return nombre;
     }
@@ -96,34 +93,71 @@ public class Restaurante {
         this.repartidores = repartidores;
     }
 
-    public List<Cliente> getClientes() {
-        return clientes;
+    public List<Pedido> getPedidos() {
+        return pedidos;
     }
 
-    public void setClientes(List<Cliente> clientes) {
-        this.clientes = clientes;
+    public void setPedidos(List<Pedido> pedidos) {
+        this.pedidos = pedidos;
     }
 
     // Métodos para agregar elementos a las listas
-
     public void agregarComida(Comida comida) {
-        comidas.add(comida);
+        if (!comidas.contains(comida)) {
+            comidas.add(comida);
+        } else {
+            System.out.println("¡La comida ya existe!");
+        }
     }
 
     public void agregarBebida(Bebida bebida) {
-        bebidas.add(bebida);
+        if (!bebidas.contains(bebida)) {
+            bebidas.add(bebida);
+        } else {
+            System.out.println("¡La bebida ya existe!");
+        }
     }
 
     public void agregarPostre(Postre postre) {
-        postres.add(postre);
+        if (!postres.contains(postre)) {
+            postres.add(postre);
+        } else {
+            System.out.println("¡El postre ya existe!");
+        }
     }
 
     public void agregarRepartidor(Repartidor repartidor) {
         repartidores.add(repartidor);
     }
 
-    public void agregarCliente(Cliente cliente) {
-        clientes.add(cliente);
+    public void agregarPedido(Pedido pedido) {
+        pedidos.add(pedido);
     }
 
+    public Comida comidaEnReseta(String name) {
+        for (Comida comida : this.comidas) {
+            if (comida.getNombre().equals(name)) {
+                return comida; // Name found in the list
+            }
+        }
+        return null;
+    }
+
+    public Bebida bebidaEnReceta(String name) {
+        for (Bebida bebida : this.bebidas) {
+            if (bebida.getNombre().equals(name)) {
+                return bebida; // Name found in the list
+            }
+        }
+        return null;
+    }
+
+    public Postre postreEnReceta(String name) {
+        for (Postre postre : this.postres) {
+            if (postre.getNombre().equals(name)) {
+                return postre; // Name found in the list
+            }
+        }
+        return null;
+    }
 }

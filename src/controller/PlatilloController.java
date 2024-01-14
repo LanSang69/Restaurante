@@ -8,14 +8,18 @@ import java.util.ResourceBundle;
 import entities.Bebida;
 import entities.Comida;
 import entities.Postre;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+import javafx.util.Duration;
 
 public class PlatilloController implements Initializable {
 
@@ -86,6 +90,13 @@ public class PlatilloController implements Initializable {
     @FXML
     public void addTolist(ActionEvent event) {
         String tipo_platillo = tipoP.getValue();
+
+        // Validate that the required fields are not empty
+        if (nombreP.getText().isEmpty() || precioP.getText().isEmpty()) {
+            success.setTextFill(Color.RED);
+            success.setText("Nombre y precio son obligatorios");
+            return;
+        }
     
         switch (tipo_platillo) {
             case "Comida":
@@ -100,20 +111,44 @@ public class PlatilloController implements Initializable {
                 }
                 break;
             case "Bebida":
-                // Similar logic for Bebida
+                Bebida nuevBebida = new Bebida(nombreP.getText(), Double.parseDouble(precioP.getText()), descripcionP.getText());
+        
+                // Check if the comida already exists in the list
+                if (!bebidas.contains(nuevBebida)) {
+                    bebidas.add(nuevBebida);
+                } else {
+                    // Handle duplicate item (e.g., show a message)
+                    success.setText("¡La bebida ya existe!");
+                }
                 break;
             case "Postre":
-                // Similar logic for Postre
+                Postre nuevPostre = new Postre(nombreP.getText(), Double.parseDouble(precioP.getText()), descripcionP.getText());
+    
+            // Check if the comida already exists in the list
+            if (!postres.contains(nuevPostre)) {
+                postres.add(nuevPostre);
+            } else {
+                // Handle duplicate item (e.g., show a message)
+                success.setText("¡La comida ya existe!");
+            }
                 break;
             default:
                 throw new IllegalArgumentException("Invalid tipo value: " + tipo_platillo);
         }
     
-        // Clear other fields and update UI
+            // Clear other fields and update UI
+        success.setTextFill(Color.GREEN);
         success.setText("Añadido exitosamente");
         nombreP.setText("");
         precioP.setText("");
         descripcionP.setText("");
+
+        // Introduce a delay before clearing the success message
+        PauseTransition pause = new PauseTransition(Duration.seconds(1)); // You can adjust the duration as needed
+        pause.setOnFinished(e -> {
+            success.setText(""); // Clear the success message after the delay
+        });
+        pause.play();
     }
     
 
