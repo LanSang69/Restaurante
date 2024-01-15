@@ -3,7 +3,6 @@ public class Comida implements Receta {
     private String nombre;
     private Double precio;
     private String descripcion;
-    //
 
     public Comida() {
         nombre = "Nombre no registrado";
@@ -16,7 +15,6 @@ public class Comida implements Receta {
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
-        //
     }
 
     public String getNombre() {
@@ -25,11 +23,6 @@ public class Comida implements Receta {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    @Override
-    public Double getPrecio() {
-        return precio;
     }
 
     public void setPrecio(Double precio) {
@@ -45,7 +38,13 @@ public class Comida implements Receta {
     }
 
     @Override
-    public void actualizarInformacion() {
-
+    public String tipoAlimento() {
+        return "Comida";
     }
+
+    @Override
+    public Double getPrecio() {
+        return precio;
+    }
+
 }

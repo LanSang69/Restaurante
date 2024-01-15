@@ -2,7 +2,6 @@ package entities;
 
 public class Cliente extends Persona {
     private String metodoPago;
-    private String correo;
     
     public Cliente() {
         super();
@@ -24,7 +23,7 @@ public class Cliente extends Persona {
     }
 
     @Override
-    public void mostrarInformacion() {
-        
+    public String tipoPersona() {
+        return "Cliente";
     }
 }

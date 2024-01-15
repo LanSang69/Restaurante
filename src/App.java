@@ -4,6 +4,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+//Proyecto final de base de datos
+
 public class App extends Application {
 
     @Override

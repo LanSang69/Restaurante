@@ -49,7 +49,7 @@ public class Repartidor extends Persona {
     }
 
     @Override
-    public void mostrarInformacion() {
-
+    public String tipoPersona() {
+        return "Repartidor";
     }
 }

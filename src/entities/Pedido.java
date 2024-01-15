@@ -1,10 +1,8 @@
 package entities;
 
-import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Pedido {
@@ -19,8 +17,7 @@ public class Pedido {
     private List<Postre> postres;
 
     // Empty Constructor
-     // Empty Constructor
-    public Pedido() {
+     public Pedido() {
         this.idPedido = "NO id";
         this.fecha = LocalDate.now();  // Default to the current date
         this.hora = LocalTime.now();   // Default to the current time

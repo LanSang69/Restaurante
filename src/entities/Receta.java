@@ -2,7 +2,7 @@ package entities;
 
 public interface Receta {
  
-    public void actualizarInformacion();
-    public Double getPrecio();
+    public abstract String tipoAlimento();
+    public abstract Double getPrecio();
    
 }

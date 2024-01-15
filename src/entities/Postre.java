@@ -3,13 +3,11 @@ public class Postre implements Receta {
     private String nombre;
     private Double precio;
     private String descripcion;
-    //
 
     public Postre() {
         nombre = "Nombre no registrado";
         precio = 0.0;
         descripcion = "Descripción no registrada";
-        //
     }
 
     public Postre(String nombre, Double precio, String descripcion) {
@@ -26,11 +24,6 @@ public class Postre implements Receta {
         this.nombre = nombre;
     }
 
-    @Override
-    public Double getPrecio() {
-        return precio;
-    }
-
     public void setPrecio(Double precio) {
         this.precio = precio;
     }
@@ -44,7 +37,12 @@ public class Postre implements Receta {
     }
 
     @Override
-    public void actualizarInformacion() {
-        
+    public String tipoAlimento() {
+        return "Postre";
+    }
+
+    @Override
+    public Double getPrecio() {
+        return precio;
     }
 }
